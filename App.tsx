@@ -4,7 +4,7 @@ import {
   NativeModules,
   SafeAreaView,
   ScrollView,
-  Text,
+  StyleSheet,
   View,
 } from 'react-native';
 
@@ -12,15 +12,17 @@ const {SunmiModule} = NativeModules;
 
 function App(): React.JSX.Element {
   const handleOnPressed = () => {
-    SunmiModule.createsSampleLog('Sample stupid testing.');
+    SunmiModule.initPrinter();
+    SunmiModule.printBitmap(
+      'https://chatgpt.com/images/chatgpt-icon-144x144.png',
+    );
   };
   return (
     <SafeAreaView>
       <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          <Text>This is sample text</Text>
+        <View style={styles.container}>
           <Button
-            title="Sunmi Printer Module testing."
+            title="Get device model"
             color="#841584"
             accessibilityLabel="Learn more about this purple button"
             onPress={handleOnPressed}
@@ -30,4 +32,10 @@ function App(): React.JSX.Element {
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 10,
+  },
+});
 export default App;
