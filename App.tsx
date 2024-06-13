@@ -1,16 +1,11 @@
 import React from 'react';
-import {
-  Button,
-  NativeModules,
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  View,
-} from 'react-native';
+import {Button, NativeModules, SafeAreaView, View} from 'react-native';
+import useAppStyle from './src/styles/app-style';
 
 const {SunmiModule} = NativeModules;
 
 function App(): React.JSX.Element {
+  const style = useAppStyle();
   const handleOnPressed = () => {
     SunmiModule.initPrinter();
     SunmiModule.printBitmap(
@@ -18,24 +13,23 @@ function App(): React.JSX.Element {
     );
   };
   return (
-    <SafeAreaView>
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View style={styles.container}>
-          <Button
-            title="Get device model"
-            color="#841584"
-            accessibilityLabel="Learn more about this purple button"
-            onPress={handleOnPressed}
-          />
-        </View>
-      </ScrollView>
+    <SafeAreaView
+      style={[
+        style.flex1,
+        style.displayFlex,
+        style.backgroundColorPrimary,
+        style.paddingVertical8,
+        style.alignItemsCenter,
+        style.justifyContentCenter,
+      ]}>
+      <Button
+        title="Get device model"
+        color="#841584"
+        accessibilityLabel="Learn more about this purple button"
+        onPress={handleOnPressed}
+      />
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    padding: 10,
-  },
-});
 export default App;

@@ -1,15 +1,15 @@
-import {StyleSheet, useColorScheme} from 'react-native/types';
+import {StyleSheet} from 'react-native';
 import {AppThemeConfig} from './app-theme-config';
+import useThemeColor from './app-theme-color';
 
 export default function useAppStyle() {
-  const sysColorScheme = useColorScheme();
-  const colorConfig = AppThemeConfig.ColorConfig[sysColorScheme || 'dark'];
+  const appColor = useThemeColor();
   const radiusSizeConfig = AppThemeConfig.RadiusSizeConfig;
   const borderWidth = AppThemeConfig.BorderWidthConfig;
   const opacityLevel = AppThemeConfig.OpacityLevelConfig;
   const fontSizeConfig = AppThemeConfig.FontSizeConfig;
 
-  const AppViewStyle: StyleSheet.NamedStyles<any> = {
+  return StyleSheet.create({
     backfaceVisibilityVisible: {
       backfaceVisibility: 'visible',
     },
@@ -17,16 +17,16 @@ export default function useAppStyle() {
       backfaceVisibility: 'hidden',
     },
     backgroundColorPrimary: {
-      backgroundColor: colorConfig.backgroundPrimary,
+      backgroundColor: appColor.backgroundPrimary,
     },
     backgroundColorSecondary: {
-      backgroundColor: colorConfig.backgroundSecondary,
+      backgroundColor: appColor.backgroundSecondary,
     },
     borderColorPrimary: {
-      borderColor: colorConfig.primary,
+      borderColor: appColor.primary,
     },
     borderColorSecondary: {
-      borderColor: colorConfig.secondary,
+      borderColor: appColor.secondary,
     },
     borderRadius2dp: {
       borderRadius: radiusSizeConfig['2dp'],
@@ -97,13 +97,11 @@ export default function useAppStyle() {
     overFlowHidden: {
       overflow: 'hidden',
     },
-  };
-  const AppTextStyle: StyleSheet.NamedStyles<any> = {
     fontColorPrimary: {
-      color: colorConfig.textPrimary,
+      color: appColor.textPrimary,
     },
     fontColorSecondary: {
-      color: colorConfig.textSecondary,
+      color: appColor.textSecondary,
     },
     fontSizeH1: {
       fontSize: fontSizeConfig.h1,
@@ -210,8 +208,6 @@ export default function useAppStyle() {
     textTransforCapitalize: {
       textTransform: 'capitalize',
     },
-  };
-  const AppImageStyle: StyleSheet.NamedStyles<any> = {
     resizeModeCover: {
       resizeMode: 'cover',
     },
@@ -239,8 +235,6 @@ export default function useAppStyle() {
     objectFitScalDown: {
       objectFit: 'scale-down',
     },
-  };
-  const AppLayoutStyle: StyleSheet.NamedStyles<any> = {
     alignContentFlexStart: {
       alignContent: 'flex-start',
     },
@@ -1553,11 +1547,5 @@ export default function useAppStyle() {
       shadowRadius: 6,
       elevation: 15,
     },
-  };
-  return StyleSheet.create({
-    ...AppViewStyle,
-    ...AppTextStyle,
-    ...AppImageStyle,
-    ...AppLayoutStyle,
   });
 }
