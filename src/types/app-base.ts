@@ -18,17 +18,17 @@ export type ColorThemeConstrains = {
 };
 
 export type FontSizeConstrain = {
-  h1: string;
-  h2: string;
-  h3: string;
-  h4: string;
-  h5: string;
-  h6: string;
-  subHeading: string; // Subheading
-  body: string; // Standard paragraph text
-  smallText: string; // Small text
-  extraSmallText: string; // Extra small text
-  caption: string; // Caption or fine print
+  h1: number;
+  h2: number;
+  h3: number;
+  h4: number;
+  h5: number;
+  h6: number;
+  subHeading: number; // Subheading
+  body: number; // Standard paragraph text
+  smallText: number; // Small text
+  extraSmallText: number; // Extra small text
+  caption: number; // Caption or fine print
 };
 
 export type SupportedRadiusSizes =

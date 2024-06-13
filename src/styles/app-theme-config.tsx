@@ -37,17 +37,17 @@ export class AppThemeConfig {
     },
   };
   public static FontSizeConfig: FontSizeConstrain = {
-    h1: '36px',
-    h2: '30px',
-    h3: '24px',
-    h4: '20px',
-    h5: '18px',
-    h6: '16px',
-    subHeading: '22px', // Subheading
-    body: '14px', // Standard paragraph text
-    smallText: '12px', // Small text
-    extraSmallText: '10px', // Extra small text
-    caption: '8px', // Caption or fine print
+    h1: 36,
+    h2: 30,
+    h3: 24,
+    h4: 20,
+    h5: 18,
+    h6: 16,
+    subHeading: 22, // Subheading
+    body: 14, // Standard paragraph text
+    smallText: 12, // Small text
+    extraSmallText: 10, // Extra small text
+    caption: 8, // Caption or fine print
   };
   public static RadiusSizeConfig: RadiusSizeConstrain = {
     '2dp': 2,
