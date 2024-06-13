@@ -106,6 +106,9 @@ android {
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
+    //Sample implementation sunmi printer library
+    //Please refer to https://developer.sunmi.com/docs/zh-CN/xeghjk491/xadzeghjk557 for the latest version
+    implementation 'com.sunmi:printerx:latest.release'
     implementation("com.facebook.react:react-android")
 
     if (hermesEnabled.toBoolean()) {
