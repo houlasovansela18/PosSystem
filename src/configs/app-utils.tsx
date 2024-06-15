@@ -20,4 +20,4 @@ const parseBooleanEnv = (env: string): boolean => {
 const __debug__ = parseBooleanEnv(APP_DEBUG);
 const __appname__ = APP_NAME;
 
-export { __debug__, __appname__ };
+export { __debug__, __appname__, parseBooleanEnv };
