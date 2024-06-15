@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { AppThemeConfig } from './app-theme-config';
+import { AppThemeConfig } from '../configs/app-theme';
 import useThemeColor from './app-theme-color';
 
 export default function useAppStyle() {
