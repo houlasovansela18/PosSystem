@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/husky.sh"
+#only checking the linting when committing any code
+yarn lint
