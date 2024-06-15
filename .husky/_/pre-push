@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/husky.sh"
+#only run the test cases
+yarn test
