@@ -3,6 +3,7 @@ import {
   type ColorThemeConstrains,
   type RadiusSizeConstrain,
   type BorderWidthConstrain,
+  type FontSizeConstrain,
 } from './app-base';
 
 export {
@@ -10,4 +11,5 @@ export {
   ColorThemeConstrains,
   RadiusSizeConstrain,
   BorderWidthConstrain,
+  FontSizeConstrain,
 };

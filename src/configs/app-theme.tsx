@@ -1,9 +1,9 @@
-import { AppColorTheme } from '../types';
 import {
   BorderWidthConstrain,
-  FontSizeConstrain,
   RadiusSizeConstrain,
-} from '../types/app-base';
+  FontSizeConstrain,
+  AppColorTheme,
+} from '../types';
 
 export class AppThemeConfig {
   public static ColorConfig: AppColorTheme = {
