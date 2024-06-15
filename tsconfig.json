@@ -1,4 +1,8 @@
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
-  "jsx": "preserve"
+  "jsx": "preserve",
+  "compilerOptions": {
+    "strict": true,
+    "typeRoots": ["src/types/app-env.ts"]
+  }
 }
