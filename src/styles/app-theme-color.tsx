@@ -1,5 +1,5 @@
-import {useColorScheme} from 'react-native';
-import {AppThemeConfig} from './app-theme-config';
+import { useColorScheme } from 'react-native';
+import { AppThemeConfig } from './app-theme-config';
 
 export default function useThemeColor() {
   const sysColorScheme = useColorScheme();

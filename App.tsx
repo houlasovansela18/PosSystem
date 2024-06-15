@@ -1,8 +1,8 @@
 import React from 'react';
-import {Button, NativeModules, SafeAreaView} from 'react-native';
+import { Button, NativeModules, SafeAreaView } from 'react-native';
 import useAppStyle from './src/styles/app-style';
 
-const {SunmiModule} = NativeModules;
+const { SunmiModule } = NativeModules;
 
 function App(): React.JSX.Element {
   const style = useAppStyle();
