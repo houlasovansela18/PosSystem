@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {AppThemeConfig} from './app-theme-config';
+import { StyleSheet } from 'react-native';
+import { AppThemeConfig } from './app-theme-config';
 import useThemeColor from './app-theme-color';
 
 export default function useAppStyle() {
@@ -1521,28 +1521,28 @@ export default function useAppStyle() {
     },
     shadowLight: {
       shadowColor: '#000',
-      shadowOffset: {width: 0, height: 1},
+      shadowOffset: { width: 0, height: 1 },
       shadowOpacity: 0.1,
       shadowRadius: 2,
       elevation: 2,
     },
     shadowMedium: {
       shadowColor: '#000',
-      shadowOffset: {width: 0, height: 2},
+      shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.3,
       shadowRadius: 3,
       elevation: 5,
     },
     shadowDark: {
       shadowColor: '#000',
-      shadowOffset: {width: 0, height: 4},
+      shadowOffset: { width: 0, height: 4 },
       shadowOpacity: 0.5,
       shadowRadius: 4,
       elevation: 10,
     },
     shadowTooDark: {
       shadowColor: '#000',
-      shadowOffset: {width: 0, height: 6},
+      shadowOffset: { width: 0, height: 6 },
       shadowOpacity: 0.7,
       shadowRadius: 6,
       elevation: 15,

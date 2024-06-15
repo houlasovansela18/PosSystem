@@ -1,4 +1,4 @@
-import {AppColorTheme} from '../types';
+import { AppColorTheme } from '../types';
 import {
   BorderWidthConstrain,
   FontSizeConstrain,

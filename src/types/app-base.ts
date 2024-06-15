@@ -1,4 +1,4 @@
-import {ColorSchemeName} from 'react-native/types';
+import { ColorSchemeName } from 'react-native/types';
 
 export type SupportedThemes = Extract<ColorSchemeName, 'light' | 'dark'>;
 
