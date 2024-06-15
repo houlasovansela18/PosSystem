@@ -9,7 +9,7 @@ then
   echo "The commit message must have this format: <verb in imperative mood> <what was done>"
   echo "Allowed verbs in imperative mood: [test, add, cut, fix, bump, make, start, stop, refactor, reformat, optimise, document, merge"]
   echo "Example: add testing commit"
-  echo "-"
+  echo "___________________________________________________________________\n"
   echo "Your commit message was: $message"
   exit 1
 fi
