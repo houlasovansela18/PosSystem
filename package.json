@@ -5,9 +5,10 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "18.2.0",
@@ -32,5 +33,20 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "prepush-if-changed"
+    }
+  },
+  "lint-staged": {
+    "*.{js, ts, jsx, tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "prepush-if-changed": {
+    "**/*.{js, ts, jsx, tsx}": "npm run test:unit"
   }
 }
