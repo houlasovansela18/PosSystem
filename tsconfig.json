@@ -3,7 +3,9 @@
   "jsx": "preserve",
   "compilerOptions": {
     "strict": true,
-    "typeRoots": ["src/types/app-env.ts"]
+    "typeRoots": ["src/types/app-env.ts"],
+    "skipLibCheck": true,
+    "types": ["jest"]
   },
-  "types": ["jest", "node", "mocha"]
+  "include": ["src/**/*", "__tests__/**/*.{js, ts, jsx, tsx}"]
 }
