@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, NativeModules, SafeAreaView, View} from 'react-native';
+import {Button, NativeModules, SafeAreaView} from 'react-native';
 import useAppStyle from './src/styles/app-style';
 
 const {SunmiModule} = NativeModules;
