@@ -89,14 +89,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
-        signingConfigs {
-            release {
-                if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
-                    storeFile file(MYAPP_UPLOAD_STORE_FILE)
-                    storePassword MYAPP_UPLOAD_STORE_PASSWORD
-                    keyAlias MYAPP_UPLOAD_KEY_ALIAS
-                    keyPassword MYAPP_UPLOAD_KEY_PASSWORD
-                }
+        release {
+            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+                storeFile file(MYAPP_UPLOAD_STORE_FILE)
+                storePassword MYAPP_UPLOAD_STORE_PASSWORD
+                keyAlias MYAPP_UPLOAD_KEY_ALIAS
+                keyPassword MYAPP_UPLOAD_KEY_PASSWORD
             }
         }
     }
@@ -105,10 +103,8 @@ android {
             signingConfig signingConfigs.debug
         }
         release {
-            // Caution! In production, you need to generate your own keystore file.
-            // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
-            minifyEnabled enableProguardInReleaseBuilds
+            signingConfig signingConfigs.release
+            minifyEnabled true
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
@@ -123,9 +119,6 @@ android {
 }
 
 dependencies {
-    // The version of react-native is set by the React Native Gradle Plugin
-    //Sample implementation sunmi printer library
-    //Please refer to https://developer.sunmi.com/docs/zh-CN/xeghjk491/xadzeghjk557 for the latest version
     implementation 'com.sunmi:printerx:latest.release'
     implementation("com.facebook.react:react-android")
 
