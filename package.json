@@ -1,6 +1,8 @@
 {
   "name": "PosSystem",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "author": "GODDA <portfolio-houlasovansela18> (https://portfolio-houlasovansela18.vercel.app)",
+  "description": "This project is build to serve multi-purpose when using sunmi v2s devices.",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -21,7 +23,8 @@
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.74.1"
+    "react-native": "0.74.1",
+    "semver": "^7.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -53,9 +56,16 @@
     }
   },
   "lint-staged": {
-    "*.{js, ts, jsx, tsx}": ["prettier --write", "eslint --fix"]
+    "*.{js, ts, jsx, tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "prepush-if-changed": {
     "**/*.{js, ts, jsx, tsx}": "npm run test:unit"
+  },
+  "bugs": {
+    "url": "https://github.com/houlasovansela18/PosSystem/issues",
+    "email": "sela.3meng@gmail.com"
   }
 }
