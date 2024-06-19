@@ -7,21 +7,22 @@ import { useColorScheme } from 'react-native';
 
 import HomeScreen from './src/screens/home';
 
-function App(): React.JSX.Element {
-  const RootStack = createNativeStackNavigator({
-    initialRouteName: 'Home',
-    screenOptions: {
-      headerStyle: { backgroundColor: 'black' },
-      headerTitleStyle: { color: 'white' },
+const RootStack = createNativeStackNavigator({
+  initialRouteName: 'Home',
+  screenOptions: {
+    headerStyle: { backgroundColor: 'black' },
+    headerTitleStyle: { color: 'white' },
+  },
+  screens: {
+    Home: {
+      screen: HomeScreen,
     },
-    screens: {
-      Home: {
-        screen: HomeScreen,
-      },
-    },
-  });
+  },
+});
 
-  const Navigation = createStaticNavigation(RootStack);
+const Navigation = createStaticNavigation(RootStack);
+
+function App(): React.JSX.Element {
   const sysColorScheme = useColorScheme();
   if (__debug__ || __DEV__) {
     console.debug('application-name:', __appname__);
