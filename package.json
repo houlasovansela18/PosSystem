@@ -1,6 +1,6 @@
 {
   "name": "PosSystem",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "author": "GODDA <portfolio-houlasovansela18> (https://portfolio-houlasovansela18.vercel.app)",
   "description": "This project is build to serve multi-purpose when using sunmi v2s devices.",
   "private": true,
@@ -19,7 +19,12 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "start": "react-native start --reset-cache",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "version:patch": "chmod +x bin/build_version.sh && bin/build_version.sh --r=patch",
+    "version:minor": "chmod +x bin/build_version.sh && bin/build_version.sh --r=minor",
+    "version:major": "chmod +x bin/build_version.sh && bin/build_version.sh --r=major",
+    "version:alpha": "chmod +x bin/build_version.sh && bin/build_version.sh --r=prerelease --i=alpha",
+    "version:beta": "chmod +x bin/build_version.sh && bin/build_version.sh --r=prerelease --i=beta"
   },
   "dependencies": {
     "react": "18.2.0",
@@ -56,10 +61,7 @@
     }
   },
   "lint-staged": {
-    "*.{js, ts, jsx, tsx}": [
-      "prettier --write",
-      "eslint --fix"
-    ]
+    "*.{js, ts, jsx, tsx}": ["prettier --write", "eslint --fix"]
   },
   "prepush-if-changed": {
     "**/*.{js, ts, jsx, tsx}": "npm run test:unit"
