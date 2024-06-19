@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 NODE_PATH=$(which node)
 

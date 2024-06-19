@@ -69,7 +69,7 @@ class AppSemverConstructClass {
       this.packageData.version = this.updatedVersion;
       const updatedPackageJson = JSON.stringify(this.packageData, null, 2);
       fs.writeFileSync(this.packageJsonPath, updatedPackageJson, 'utf-8');
-      this.logUpdateMessage('package.json');
+      this.logUpdateMessage(this.packageJsonPath.concat(':3'));
     } catch (e) {
       throw new Error(e);
     }
@@ -92,12 +92,12 @@ class AppSemverConstructClass {
     );
 
     fs.writeFileSync(this.buildGradlePath, buildGradle, 'utf-8');
-    this.logUpdateMessage('/android/app/build.gradle');
+    this.logUpdateMessage(this.buildGradlePath.concat(':83'));
   }
   logUpdateMessage(fileName) {
-    console.log('-  ', fileName);
+    console.log('📄  ', fileName);
     console.log(
-      `Version updated from ${this.version} to ${this.updatedVersion}`,
+      `🤖  Version updated from ${this.version} to ${this.updatedVersion}`,
     );
     console.log();
   }
