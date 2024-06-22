@@ -1,13 +1,14 @@
-// __tests__/App.test.tsx
 import React from 'react';
 import { render, waitFor } from '@testing-library/react-native';
-import App from '../App'; // Adjust the path if necessary
+import App from '../App';
+
 const __debug__ = true;
 const __appname__ = 'SO Management';
 
 jest.mock('@react-navigation/native', () => {
   const actualNav = jest.requireActual('@react-navigation/native');
   return {
+    // @ts-ignore
     ...actualNav,
     createStaticNavigation: jest
       .fn()
