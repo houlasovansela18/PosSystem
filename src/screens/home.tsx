@@ -4,7 +4,7 @@ import useAppStyle from '../styles/app-style';
 
 const { SunmiModule } = NativeModules;
 
-export default function HomeScreen() {
+export default function HomeScreen(): React.JSX.Element {
   const style = useAppStyle();
   const handleOnPressed = () => {
     SunmiModule.initPrinter();

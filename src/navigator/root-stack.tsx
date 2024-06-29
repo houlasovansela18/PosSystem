@@ -5,7 +5,7 @@ import useThemeColor from '../styles/app-theme-color';
 
 const Stack = createNativeStackNavigator();
 
-export default function RootStack() {
+export default function RootStack(): React.JSX.Element {
   const appTheme = useThemeColor();
   return (
     <Stack.Navigator
