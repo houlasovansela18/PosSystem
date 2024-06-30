@@ -4,6 +4,7 @@ import {
   type RadiusSizeConstrain,
   type BorderWidthConstrain,
   type FontSizeConstrain,
+  type BaseProps,
 } from './app-base';
 
 export {
@@ -12,4 +13,5 @@ export {
   RadiusSizeConstrain,
   BorderWidthConstrain,
   FontSizeConstrain,
+  BaseProps,
 };
