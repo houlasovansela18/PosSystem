@@ -2,11 +2,18 @@
   "extends": "@react-native/typescript-config/tsconfig.json",
   "jsx": "preserve",
   "compilerOptions": {
+    "baseUrl": ".",
     "strict": true,
-    "typeRoots": ["src/types/app-env.ts"],
     "skipLibCheck": true,
-    "types": ["jest"],
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "typeRoots": ["src/types/app-env.ts"],
+    "paths": {
+      "*": ["src/*"],
+      "tests": ["__tests__/*"],
+      "@components/*": ["src/components/*"]
+    },
+    "types": []
   },
-  "include": ["src/**/*", "__tests__/**/*.{js, ts, jsx, tsx}"]
+  "include": ["src/**/*"],
+  "exclude": ["__tests__/**/*"]
 }

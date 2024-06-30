@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { ColorSchemeName } from 'react-native/types';
 
 export type SupportedThemes = Extract<ColorSchemeName, 'light' | 'dark'>;
@@ -64,4 +65,8 @@ export type BorderWidthConstrain = {
 
 export type AppColorTheme = {
   [key in SupportedThemes]: ColorThemeConstrains;
+};
+
+export type BaseProps = {
+  chidren: ReactNode;
 };
