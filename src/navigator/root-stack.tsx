@@ -14,6 +14,9 @@ export default function RootStack(): React.JSX.Element {
         headerStyle: {
           backgroundColor: appTheme.backgroundPrimary,
         },
+        headerTitleStyle: {
+          color: appTheme.textPrimary,
+        },
       }}>
       <Stack.Screen name="Home" component={HomeScreen} />
     </Stack.Navigator>
